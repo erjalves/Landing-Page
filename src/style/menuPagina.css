@@ -1,0 +1,90 @@
+/*
+    #navbar = #menuPagina
+    #nab_logo = #iconeMenu
+    #nav_list = #menu
+    .nav-item = .itemMenu
+    #mobile_menu = #mobileMenu
+    #mobile_nav_list = #menuMobile 
+ */
+
+header{
+    width: 100%;
+    padding: 28px 8%;
+    position: sticky; /*Mantém o componente */
+    top: 0;
+    background-color: var( --colorPrimaryOne);
+    z-index: 3;
+}
+
+#menuPagina{
+    width: 100%;
+   display: flex;   /*Posiciona os itens um ao lado do outro */
+    align-items: center;
+    justify-content: space-between;
+}
+
+#iconeMenu{
+    font-size: 24px;
+    color: var(--colorPrimaryFour)
+}
+
+#menuLista{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.itemMenu a{
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+
+.itemMenu.active a{
+    color: #1d1d1d;
+    border-bottom: 3px solid var(--colorPrimaryThree);
+}
+
+/* Ocultando o Menu Mobile */
+#mobileMenu{
+    display: none;
+}
+
+/* Ocultando o botão do Menu Mobile */
+.mobileBtn{
+    display: none;
+}
+
+/* Mostrando o Menu Mobile de acordo com tamanho da tela */
+@media screen and (max-width: 1170px) {
+
+    #menuLista, #menuPagina .btnDefault {
+        display: none;
+    }
+    .mobileBtn{
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobileMenu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+     #menuMobile{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #menuMobile .itemMenu{
+        list-style: none;
+        text-align: center;
+    }
+}
