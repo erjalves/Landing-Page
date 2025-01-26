@@ -2,6 +2,7 @@ footer{
     background-color: var(--colorPrimaryTwo);
 }
 
+/*Estilizando o rodapé da página*/
 #footerItems{
     display: flex;
     justify-content: space-between;
@@ -9,6 +10,7 @@ footer{
     align-items: center;
 }
 
+/* Estilizando o ícone de direitos autorais */
 #copyRight{
     color: #1d1d1d;
     font-weight: 500;
